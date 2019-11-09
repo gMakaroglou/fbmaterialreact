@@ -1,4 +1,7 @@
-const config  = {
+import * as firebase from "firebase/app";
+import "firebase/auth";
+
+const config  = firebase.initializeApp( {
     apiKey: "AIzaSyBjhWf1j7CKaUBF9w1muQLUFxSUvzfJY54",
     authDomain: "ptuxiakhtesting.firebaseapp.com",
     databaseURL: "https://ptuxiakhtesting.firebaseio.com",
@@ -8,6 +11,6 @@ const config  = {
     appId: "1:62953189723:web:22f4d8ccfd1d926274aa7e",
     measurementId: "G-LK6BJ3DGK8"
 
-  };
+  });
 
 export default config;

@@ -15,10 +15,13 @@ const row = (x,i,header) =>
 (
     <TableRow key={`tr-${i}`}>
         {
+       //   Object.keys(x).map((y,k)=>{
             header.map((y,k)=>{
                 return(
-                // console.log(y);
-                // console.log(k);
+               //   console.log(y),
+               //   console.log(header),
+                 console.log(x[y.prop]),
+                // console.log(k),
                 // console.log(y.prop);
                 // console.log(x[y.prop]);
                 <TableRowColumn key={`trc-${k}`}>{x[y.prop]}</TableRowColumn>
@@ -32,7 +35,8 @@ export default({data,header}) =>
       <TableRow>
           {
               header.map((x,i) =>{
-              // console.log(x.name);
+            //  console.log(x.name),
+           //   console.log(i)
               return(
               <TableHeaderColumn  key ={`thc-${i}`}>{x.prop}</TableHeaderColumn>
               )})
@@ -51,11 +55,13 @@ export default({data,header}) =>
       </TableRow>
     </TableHeader>
     <TableBody>
-        {data.map((x,i)=>{
+        {Object.keys(data).map((x)=>{
             return(
-          //  console.log(x);
-           // console.log(i);
-            row(x,i,header)
+             console.log(x),
+            console.log(data[x]),
+           // console.log(data),
+            //console.log(i)
+            row(data[x],x,header)
             )
         })}
         {/* <TableRow>

@@ -7,7 +7,8 @@
     "material-ui-selectfield": "^1.0.24",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-scripts": "0.9.5"
+    "react-scripts": "0.9.5",
+    "react-with-firebase-auth": "^1.1.0"
   },
   "devDependencies": {
     "material-ui": "^0.20.2"
