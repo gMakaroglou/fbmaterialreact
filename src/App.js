@@ -49,6 +49,7 @@ class App extends Component {
     ref.on("value", snapshot => {
       const state = snapshot.val();
       this.setState(state);
+      console.log("testingggggggggggggggggggggggg "+ snapshot.val().email)
     });
   };
   // testingmethod = (array) => {
@@ -66,21 +67,35 @@ class App extends Component {
   //     )
   //   })
   // }
+  getData(val){
+    // do not forget to bind getData in constructor
+    console.log("FEPIAFIEQAFEIJJFIEFFAFDSA "+val);
+}
   render() {
     const { Items} = this.state;
     const {developers} = this.state;
     const {sensors} = this.state;
     const {SensorValues} = this.state;
+    let user = Fbconfig.auth().currentUser;
+    let useremail;
+
+      if (user) {
+        useremail = user.email;
+        console.log("dsako[das[oads[oasd[kdkads"+useremail);
+      } else {
+        // No user is signed in.
+      }
   //   const firebaseAppAuth = firebaseApp.auth();
   //  const providers = {
   //   googleProvider: new Firebase.auth.GoogleAuthProvider(),
   // };
    // console.log(sensors);
     //this.testingmethod(developers);
+
     return (
      
       <React.Fragment>
-        <Navigation />
+        <Navigation signedin={useremail} />
         <AuthProvider>
         <Router>
           <div>

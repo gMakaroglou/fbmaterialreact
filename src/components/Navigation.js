@@ -8,7 +8,7 @@ import PrivateRoute from "./PrivateRoute"
 import {BrowserRouter as Router , Route} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, NavItem, NavDropdown, MenuItem, Nav,Form,FormControl,Button } from 'react-bootstrap';
-const Navigation = () => {
+const Navigation = (props) => {
  return(
 
     /* <AuthProvider>
@@ -33,7 +33,7 @@ const Navigation = () => {
        <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
             
             <Navbar.Text>
-      Signed in as: <a href="#login">Mark Otto</a>
+      Signed in as: <a href="#login">{props.signedin}</a>
     </Navbar.Text>
           </div>
           </Navbar.Collapse>

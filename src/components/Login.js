@@ -4,6 +4,7 @@ import app from "../components/FirebaseConfig/FirebaseConfig";
 import { AuthContext } from "./Auth.js";
 
 const Login = ({ history }) => {
+    
   const handleLogin = useCallback(
     async event => {
       event.preventDefault();
@@ -21,11 +22,13 @@ const Login = ({ history }) => {
   );
 
   const { currentUser } = useContext(AuthContext);
-
+  
   if (currentUser) {
     return <Redirect to="/" />;
   }
-
+  const demoMethod= (email) =>{ 
+    this.props.sendData(email.value);
+  }
   return (
     <div>
       <h1>Log in</h1>
