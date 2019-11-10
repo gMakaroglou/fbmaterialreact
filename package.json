@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "lodash.orderby": "^4.6.0",
     "material-table": "^1.53.0",
     "material-ui-selectfield": "^1.0.24",
     "react": "^16.11.0",
@@ -14,7 +15,7 @@
     "material-ui": "^0.20.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start /* eslint-disable */",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

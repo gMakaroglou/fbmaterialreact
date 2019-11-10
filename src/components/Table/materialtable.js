@@ -7,6 +7,8 @@ import {
   TableRow,
   TableRowColumn,
 } from 'material-ui/Table';
+import SelectField from 'material-ui/SelectField';
+import MenuItem from 'material-ui/MenuItem';
 
 /**
  * A simple table demonstrating the hierarchy of the `Table` component and its sub-components.
@@ -20,7 +22,7 @@ const row = (x,i,header) =>
                 return(
                //   console.log(y),
                //   console.log(header),
-                 console.log(x[y.prop]),
+               //  console.log(x[y.prop]),
                 // console.log(k),
                 // console.log(y.prop);
                 // console.log(x[y.prop]);
@@ -57,7 +59,7 @@ export default({data,header}) =>
     <TableBody>
         {Object.keys(data).map((x)=>{
             return(
-             console.log(x),
+            // console.log(x),
             console.log(data[x]),
            // console.log(data),
             //console.log(i)
